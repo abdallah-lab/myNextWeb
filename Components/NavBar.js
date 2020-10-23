@@ -26,7 +26,9 @@ export default function NavBar({ title }) {
           {nav.map((obj) => {
             return (
               <li className={`navli ${title === obj.title && "active"}`}>
-                <Link href={`/${obj.title}`}>{obj.title}</Link>
+                <Link as={`/${obj.title}`} href={"/[page]"}>
+                  {obj.title}
+                </Link>
               </li>
             );
           })}
