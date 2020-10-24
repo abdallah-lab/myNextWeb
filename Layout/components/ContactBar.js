@@ -1,6 +1,4 @@
-import Link from "next/link";
-
-export default function Footer() {
+export default function ContactBar() {
   return (
     <div>
       <div>
@@ -46,42 +44,6 @@ export default function Footer() {
             <i className="fa fa-twitter fa-stack-1x"></i>
           </a>
         </span>
-      </div>
-
-      <div className="footer">
-        <div className="col-1"></div>
-        <div className="col-3 col-m-3 cen">
-          <ul>
-            <h1 className="f-title">Services</h1>
-            <li>Business consult</li>
-            <br />
-            <li>Business Plan</li>
-            <br />
-            <li>Web design</li>
-          </ul>
-        </div>
-
-        <div className="col-4 col-m-4 cen">
-          <ul>
-            <h1 className="f-title">Related Companies</h1>
-            <li>Mobarak perfumes</li>
-            <br />
-            <li>My-Team</li>
-            <br />
-            <li>Mobarak group</li>
-          </ul>
-        </div>
-
-        <div className="col-3 col-m-4 cen">
-          <ul>
-            <h1 className="f-title">Members</h1>
-            <li>Teams & groups</li>
-            <br />
-            <li>Become a member</li>
-            <br />
-            <li>Built your own business</li>
-          </ul>
-        </div>
       </div>
     </div>
   );

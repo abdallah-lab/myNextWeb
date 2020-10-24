@@ -35,7 +35,7 @@ export default function NavBar({ title }) {
             return (
               <li
                 key={index}
-                className={`navli ${page === obj.title && "active"}`}
+                className={`navli ${title === obj.title && "active"}`}
               >
                 <Link href={`/page/${obj.link}`}>{obj.title}</Link>
               </li>
