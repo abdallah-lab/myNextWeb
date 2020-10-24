@@ -7,11 +7,13 @@ export default function Header() {
       <div id="corner_2">
         <img src="/img/corner_2.png" />
       </div>
-      <div id="circle">
-        <img id="profile_img" src="/img/Wha.png" />
-      </div>
-      <div id="elliptic">
-        <span>Abdallah Mobarak</span>
+      <div>
+        <div id="circle">
+          <img id="profile_img" src="/img/Wha.png" />
+        </div>
+        <div id="elliptic">
+          <span>Abdallah Mobarak</span>
+        </div>
       </div>
     </div>
   );

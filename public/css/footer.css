@@ -1,0 +1,41 @@
+.footer {
+  width: 100%;
+  background-color: rgba(101, 103, 138, 1);
+  border-top: 1px solid rgba(0, 0, 0, 1);
+  padding-bottom: 40px;
+}
+.footer::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.f-title {
+  line-height: 50px;
+  font-family: alice;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.l-title {
+  line-height: 50px;
+  font-family: "Josefin Slab";
+  font-size: 30px;
+  color: rgba(62, 64, 116, 1);
+}
+
+.cen ul li {
+  font-family: "Josefin Slab";
+  font-size: 150%;
+  color: rgba(241, 240, 96, 1);
+  padding-left: 10px;
+  list-style-type: none;
+}
+
+.itag {
+  cursor: pointer;
+  color: rgba(101, 103, 138, 1);
+}
+.itag:hover {
+  color: rgba(241, 240, 96, 1);
+}

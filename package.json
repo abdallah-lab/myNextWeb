@@ -9,10 +9,13 @@
   },
   "dependencies": {
     "next": "latest",
+    "node-sass": "4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "license": "MIT",
-  "keywords": ["next"],
+  "keywords": [
+    "next"
+  ],
   "description": "A \"Hello World\" application with multiple pages that shows how Next.js routing works."
 }
