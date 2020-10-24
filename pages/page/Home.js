@@ -1,21 +1,19 @@
-import MainLayout from "../../Layout/MainLayout";
-
 export default function Home() {
   return (
-    <MainLayout title="Home">
-      <div id="top_w">
+    <div className="homeContainer">
+      <div id="decor-1">
         <img src="/img/buttom.png" />
       </div>
-      <div id="down">
-        <i class="fa fa-3x fa-angle-down"></i>
+      <div id="downArrow">
+        <i className="fa fa-3x fa-angle-down"></i>
       </div>
-      <div id="top_w">
+      <div id="decor-2">
         <img src="/img/top.png" />
       </div>
       <div id="b_title">
         <span>Strategic HIS Manager</span>
       </div>
-      <div id="top_wl">
+      <div id="decor-3">
         <img src="/img/linee.png" />
       </div>
       <div id="describe">
@@ -24,9 +22,9 @@ export default function Home() {
           will advance in a great strides
         </span>
       </div>
-      <div id="bottom_w">
+      <div id="decor-4">
         <img src="/img/buttom.png" />
       </div>
-    </MainLayout>
+    </div>
   );
 }

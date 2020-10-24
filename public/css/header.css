@@ -7,17 +7,22 @@
 
 #circle {
   margin: auto;
-  height: 180px;
-  width: 180px;
+  height: 190px;
+  width: 190px;
   background-color: rgba(255, 255, 255, 1);
   border: 1px solid rgba(62, 64, 116, 1);
   border-radius: 100px;
-  padding: 5px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
 }
 #profile_img {
-  height: 170px;
-  width: 170px;
+  height: 180px;
+  width: 180px;
   border-radius: 100px;
+  z-index: 2;
 }
 #elliptic {
   background-color: white;
@@ -40,10 +45,12 @@
 #corner_1 {
   position: absolute;
   left: 0.5rem;
+  z-index: 0;
 }
 #corner_2 {
   position: absolute;
   right: 0.5rem;
+  z-index: 0;
 }
 
 .corner-img {

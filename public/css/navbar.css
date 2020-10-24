@@ -33,6 +33,7 @@ body {
   font-family: alice;
   font-size: 150%;
   position: sticky;
+  position: -webkit-sticky;
   top: 0px;
   z-index: 1;
 }
@@ -49,15 +50,13 @@ body {
 
 .navli {
   flex: 1 1 100%;
+  display: block;
   margin: 1px;
   padding: 0.5rem 1rem;
   overflow-wrap: unset;
-}
-
-.navli a {
-  display: block;
+  width: fit-content;
   text-align: center;
-  overflow-wrap: unset;
+  min-width: 10rem;
 }
 
 .active {
