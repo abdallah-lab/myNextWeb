@@ -1,6 +1,8 @@
+import MainLayout from "../../Layout/MainLayout";
+
 export default function Home() {
   return (
-    <div>
+    <MainLayout title="Home">
       <div id="top_w">
         <img src="/img/buttom.png" />
       </div>
@@ -25,6 +27,6 @@ export default function Home() {
       <div id="bottom_w">
         <img src="/img/buttom.png" />
       </div>
-    </div>
+    </MainLayout>
   );
 }
