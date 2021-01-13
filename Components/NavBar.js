@@ -1,0 +1,123 @@
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { colors } from "../public/js/options";
+
+export default function NavBar({ title }) {
+  const [hidden, setHidden] = useState(true);
+
+  useEffect(() => {
+    setHidden(true);
+  }, [title]);
+  const nav = [
+    { title: "Home" },
+    { title: "About Me" },
+    { title: "My Work" },
+    { title: "For You" },
+    { title: "Reserve" },
+    { title: "Talk About" },
+    { title: "Contact Me" }
+  ];
+  return (
+    <>
+      <div>
+        <div onClick={() => setHidden(!hidden)} className="nv">
+          <i className="fa fa-2x fa-navicon"></i>
+        </div>
+        <div className="navbar">
+          <ul className={`max ${hidden && "displayNone"}`}>
+            {nav.map((obj) => {
+              return (
+                <Link href={`/${obj.title}`}>
+                  <li className={`navli ${title === obj.title && "active"}`}>
+                    {obj.title}
+                  </li>
+                </Link>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+      <style jsx>{`
+        .nv {
+          background-color: ${colors.grey};
+          padding: 0.4rem 0.8rem;
+          color: white;
+          font-size: 130%;
+          position: sticky;
+          display: none;
+          top: 0px;
+          border-bottom: 1px solid ${colors.greyDark};
+        }
+        .nv i {
+          padding: 0px 5px 0px 5px;
+          border: 1px solid ${colors.grey};
+          border-radius: 5px;
+          box-shadow: 1px 1px 5px grey;
+          cursor: pointer;
+        }
+        .navbar {
+          border-top: 1px solid ${colors.secondaryColor};
+          border-bottom: 2px solid ${colors.secondaryColor};
+          background-color: ${colors.grey};
+          margin: auto;
+          font-family: alice;
+          font-size: 150%;
+          position: sticky;
+          top: 0px;
+          z-index: 1;
+        }
+        .max {
+          width: 100%;
+          margin: auto;
+          display: flex;
+          justify-content: flex-start;
+          list-style-type: none;
+          padding: 0px;
+          overflow: auto;
+          color: white;
+        }
+        .navli {
+          flex: 1 1 100%;
+          margin: 1px;
+          padding: 0.5rem 1rem;
+          overflow-wrap: unset;
+          text-align: center;
+        }
+        .navli a {
+          display: block;
+          text-align: center;
+          overflow-wrap: unset;
+        }
+        .active {
+          color: white;
+          background-color: ${colors.primaryColor};
+        }
+        @media only screen and (max-width: 900px) {
+          .navbar {
+            border: 0px;
+          }
+          .nv {
+            display: block;
+          }
+          .navli {
+            display: block;
+            width: 100%;
+            margin: auto;
+            float: none;
+          }
+          .navli a {
+            display: block;
+            color: white;
+            width: 100%;
+          }
+          .max {
+            display: block;
+          }
+          .displayNone {
+            display: none;
+          }
+        }
+      `}</style>
+    </>
+  );
+}
