@@ -4,13 +4,13 @@ export default function Header() {
     <>
       <div className="header">
         <div className="corner_1">
-          <img src="/img/corner_1.png" alt="" />
+          <img src="/img/corner.png" alt="" />
         </div>
         <div className="corner_2">
-          <img src="/img/corner_2.png" alt="" />
+          <img src="/img/corner.png" alt="" />
         </div>
         <div className="circle">
-          <img className="profile_img" src="/img/Wha.png" alt="" />
+          <img className="profile_img" src="/img/Profile.png" alt="" />
         </div>
         <div className="elliptic">
           <span>Abdallah Mobarak</span>
@@ -66,6 +66,7 @@ export default function Header() {
         .corner_2 {
           position: absolute;
           right: 0.5rem;
+          transform: rotateY(180deg);
         }
 
         .corner-img {

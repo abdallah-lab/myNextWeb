@@ -1,5 +1,7 @@
 import { colors } from "../../public/js/options";
 import { ListofAreas, skills } from "../../public/js/Data";
+import FlexBox from "../../Components/FlexBox";
+
 export default function AboutMe() {
   return (
     <>
@@ -44,9 +46,8 @@ export default function AboutMe() {
           ))}
         </div>
       </div>
-
-      <div id="f_title">My Brands :</div>
-
+      <FlexBox title={"My Brands : "} folder={"mybrands"} number={3} />
+      <FlexBox title={"I Use : "} folder={"iuse"} number={32} />
       <div class="scrollbar" id="style-2">
         <div class="force-overflow"></div>
       </div>
