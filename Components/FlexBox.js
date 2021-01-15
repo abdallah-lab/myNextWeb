@@ -1,28 +1,44 @@
 import NameBar from "./NameBar";
-
-export default function FlexBox({ title, folder, number }) {
+import { colors } from "../public/js/options";
+import Link from "next/link";
+export default function FlexBox({ title, text, folder, number, withlink }) {
   return (
     <>
-      <NameBar title={title} />
-      <div className="scrollbar">
-        <div className="force-overflow">
-          {Array.from(Array(number).keys()).map((n) => (
-            <img src={`img/${folder}/${n}.png`} alt="" className="img" />
-          ))}
+      <div className="flexContainer">
+        <NameBar title={title} />
+        <div className="scrollbar">
+          <div className="force-overflow">
+            {withlink
+              ? withlink.map((n) => (
+                  <Link href={n.link}>
+                    <img
+                      src={`img/${folder}/${n.img}.png`}
+                      alt=""
+                      className="img"
+                    />
+                  </Link>
+                ))
+              : Array.from(Array(number).keys()).map((n) => (
+                  <img src={`img/${folder}/${n}.png`} alt="" className="img" />
+                ))}
+            <div className="text">{text}</div>
+          </div>
         </div>
       </div>
       <style jsx>{`
+        .flexContainer {
+          margin: 0.5rem 0rem;
+        }
         .scrollbar {
-          margin: auto;
-          width: 95%;
+          width: 100%;
           overflow-x: scroll;
-          border-radius: 10px;
           display: -webkit-box;
           display: -moz-box;
           display: -ms-flexbox;
           display: -webkit-flex;
           display: flex;
           flex-flow: row;
+          border-bottom: 1px solid ${colors.primaryColor};
         }
 
         .force-overflow {
@@ -47,7 +63,16 @@ export default function FlexBox({ title, folder, number }) {
             background-color: #f1f060;
         }
         .img {
+          padding-right: 1rem;
           height: 9rem;
+        }
+        .text {
+          padding: 1rem;
+          width: 14rem;
+          font-size: 1.5rem;
+          align-self: center;
+          text-align: center;
+          color: ${colors.primaryColorDark};
         }
       `}</style>
     </>

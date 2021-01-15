@@ -1,10 +1,12 @@
 import { colors } from "../../public/js/options";
 import { FaAngleDown } from "react-icons/fa";
+import FlexBox from "../../Components/FlexBox";
+import MyBrands from "../../Components/MyBrands";
 export default function Home() {
   return (
     <>
       <div className="container">
-        <div className="decor">
+        <div className="decor down1">
           <img src="/img/decor.png" alt="" className="decorImg" />
         </div>
         <div className="down">
@@ -25,9 +27,10 @@ export default function Home() {
             will advance in a great strides
           </span>
         </div>
-        <div className="decor">
+        <div className="decor down2">
           <img src="/img/decor.png" alt="" className="decorImg" />
         </div>
+        <MyBrands />
       </div>
       <style jsx>{`
         .container {
@@ -46,7 +49,7 @@ export default function Home() {
           transform: rotate(180deg);
         }
         .line {
-          width: 96%;
+          width: 70%;
           margin: auto;
         }
         .down {
@@ -54,6 +57,7 @@ export default function Home() {
           width: fit-content;
           color: grey;
           margin: auto;
+          margin-bottom: 6rem;
         }
         .Btitle {
           font-size: 550%;
@@ -67,22 +71,38 @@ export default function Home() {
           text-align: center;
           color: ${colors.primaryColor};
         }
+        .down1 {
+          margin-bottom: 5rem;
+        }
+
+        .down2 {
+          margin-bottom: 16rem;
+          width: 70vw;
+          max-width: 25rem;
+        }
 
         @media only screen and (max-width: 840px) {
           .top_wl {
             width: 100%;
           }
           .Btitle {
-            font-size: 400%;
+            font-size: 3rem;
+          }
+          .line {
+            width: 70%;
           }
         }
+
         @media only screen and (max-width: 500px) {
           .top_w {
             width: 90%;
           }
 
           .Btitle {
-            font-size: 250%;
+            font-size: 2.4rem;
+          }
+          .line {
+            width: 90%;
           }
         }
       `}</style>

@@ -1,13 +1,14 @@
 import { colors } from "../../public/js/options";
 import { ListofAreas, skills } from "../../public/js/Data";
 import FlexBox from "../../Components/FlexBox";
+import MyBrands from "../../Components/MyBrands";
 
 export default function AboutMe() {
   return (
     <>
       <div className="container">
         <div className="part">
-          <div className="c_title">About Me</div>
+          <div className="title">About Me</div>
           <div className="about_par">
             <p>
               &nbsp;&nbsp;Hi, This is Abdallah Mobarak, I'm Lebanese national.
@@ -33,7 +34,7 @@ export default function AboutMe() {
         </div>
 
         <div className="part">
-          <div className="c_title">My Skills</div>
+          <div className="title">My Skills</div>
           {skills.map((skill, index) => (
             <div key={index}>
               <div className="s_title">{skill.title}</div>
@@ -46,11 +47,13 @@ export default function AboutMe() {
           ))}
         </div>
       </div>
-      <FlexBox title={"My Brands : "} folder={"mybrands"} number={3} />
-      <FlexBox title={"I Use : "} folder={"iuse"} number={32} />
-      <div class="scrollbar" id="style-2">
-        <div class="force-overflow"></div>
-      </div>
+      <MyBrands />
+      <FlexBox
+        title={"I Use : "}
+        folder={"iuse"}
+        number={32}
+        text={"& much more ..."}
+      />
 
       <style jsx>{`
         .container {
@@ -70,8 +73,10 @@ export default function AboutMe() {
           height: fit-content;
           flex: 1 1 16rem;
         }
-
-        .c_title {
+        p {
+          padding: 0.8rem 0;
+        }
+        .title {
           font-size: 3rem;
           font-family: alice;
           color: ${colors.primaryColor};
@@ -80,9 +85,10 @@ export default function AboutMe() {
 
         .about_par {
           color: ${colors.primaryColor};
-          font-size: 22px;
+          font-size: 1.2rem;
           font-family: "Josefin Slab";
-          line-height: 35px;
+          line-height: 2rem;
+          padding: 0.6rem;
         }
 
         .skillContainer {

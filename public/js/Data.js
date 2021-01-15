@@ -21,3 +21,45 @@ export const skills = [
   { title: "Managament Skills", percent: "80%" },
   { title: "Business skills", percent: "85%" }
 ];
+
+export const footerList = [
+  {
+    title: "Services",
+    list: ["Web design", "Business Plan", "Business consult"]
+  },
+  {
+    title: "Related Companies",
+    list: ["Za-apps", "Za-Market", "Mobarak perfumes"]
+  },
+  {
+    title: "Members",
+    list: ["Teams & groups", "Become a member", "Built your own business"]
+  }
+];
+export const myBrands = [
+  {
+    name: "Mobarak Perfumes",
+    img: "0",
+    link: "/commingSoon"
+  },
+  {
+    name: "Empower Academy",
+    img: "1",
+    link: "/commingSoon"
+  },
+  {
+    name: "A+",
+    img: "2",
+    link: "/commingSoon"
+  },
+  {
+    name: "Za Market",
+    img: "3",
+    link: "https://za-market.com"
+  },
+  {
+    name: "Za Apps",
+    img: "4",
+    link: "https://za-apps.com"
+  }
+];

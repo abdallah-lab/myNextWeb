@@ -1,34 +1,24 @@
 import { colors } from "../public/js/options";
 import ContactBar from "./ContactBar";
+import { footerList } from "../public/js/Data";
 export default function Footer() {
-  const footerList = [
-    {
-      title: "Services",
-      list: ["Web design", "Business Plan", "Business consult"]
-    },
-    {
-      title: "Related Companies",
-      list: ["My-Team", "Mobarak group", "Mobarak perfumes"]
-    },
-    {
-      title: "Members",
-      list: ["Teams & groups", "Become a member", "Built your own business"]
-    }
-  ];
   return (
     <>
       <ContactBar />
       <div className="footer">
-        {footerList.map((item, index) => (
-          <div key={index} className="cen">
-            <ul>
-              <h1 className="f-title">{item.title}</h1>
-              {item.list.map((l, i) => (
-                <li key={i}>{l}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        {/* <div className="footerElements">
+          {footerList.map((item, index) => (
+            <div key={index} className="cen">
+              <ul>
+                <h1 className="footerTitle">{item.title}</h1>
+                {item.list.map((l, i) => (
+                  <li key={i}>{l}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div> */}
+        <div>© All Rights Reserved to Abdallah Mobarak since 2015</div>
       </div>
       <style jsx>{`
         .footer {
@@ -37,16 +27,19 @@ export default function Footer() {
           padding: 0.5rem;
           background-color: ${colors.primaryColor};
           border-top: 1px solid black;
-          padding-bottom: 40px;
-          display: flex;
-          justify-content: space-evenly;
+          text-align: center;
         }
-
-        .f-title {
+        .footerElements {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .footerTitle {
           line-height: 50px;
           font-family: alice;
-          font-size: 30px;
-          color: rgba(255, 255, 255, 1);
+          font-size: 1.6rem;
+          color: white;
+          text-align: left;
         }
 
         .cen {
@@ -56,10 +49,11 @@ export default function Footer() {
         }
         .cen ul li {
           font-family: "Josefin Slab";
-          font-size: 150%;
-          color: rgba(241, 240, 96, 1);
+          font-size: 1.3rem;
+          color: ${colors.secondaryColor};
           list-style-type: none;
           padding: 0.5rem;
+          text-align: left;
         }
 
         .itag {

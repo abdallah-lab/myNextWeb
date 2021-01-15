@@ -11,17 +11,17 @@ import { colors } from "../public/js/options";
 export default function ContactBar() {
   return (
     <>
-      <div className="contact">
-        <span>Contact Me : </span>
-        <span className="icon">
+      <div className="contactContainer">
+        <span className="contact">Contact Me : </span>
+        <span className="icon whatsapp">
           <Link
             className="itag"
-            href="https://api.whatsapp.com/send?phone=989196639816"
+            href="https://api.whatsapp.com/send?phone=96181026095"
           >
             <FaWhatsapp />
           </Link>
         </span>
-        <span className="icon">
+        <span className="icon insta">
           <Link
             className="itag"
             href="https://www.instagram.com/abdallah.mobarak/"
@@ -29,7 +29,7 @@ export default function ContactBar() {
             <FaInstagram />
           </Link>
         </span>
-        <span className="icon">
+        <span className="icon facebook">
           <Link
             className="itag"
             href="https://www.facebook.com/abdallah.mobarak.3"
@@ -37,32 +37,47 @@ export default function ContactBar() {
             <FaFacebook />
           </Link>
         </span>
-        <span className="icon">
+        <span className="icon youtube">
           <Link className="itag" href="#">
             <FaYoutube />
           </Link>
         </span>
-        <span className="icon">
+        <span className="icon twiter">
           <Link className="itag" href="#">
             <FaTwitter />
           </Link>
         </span>
       </div>
       <style jsx>{`
-        .contact {
+        .contactContainer {
           font-size: 1.6rem;
-
           display: flex;
-
           align-items: center;
-
-          padding: 0.5rem;
-
+          padding: 0 0.5rem;
           color: ${colors.primaryColor};
+          margin-top: 2rem;
+        }
+        .contact {
+          padding-bottom: 0.5rem;
         }
 
         .icon {
           padding: 0 0.2rem;
+        }
+        .whatsapp {
+          color: #090;
+        }
+        .facebook {
+          color: #3b5998;
+        }
+        .youtube {
+          color: red;
+        }
+        .twiter {
+          color: #00acee;
+        }
+        .insta {
+          color: #8a3ab9;
         }
       `}</style>
     </>

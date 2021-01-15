@@ -4,7 +4,6 @@ import { colors } from "../public/js/options";
 
 export default function NavBar({ title }) {
   const [hidden, setHidden] = useState(true);
-
   useEffect(() => {
     setHidden(true);
   }, [title]);
@@ -19,7 +18,7 @@ export default function NavBar({ title }) {
   ];
   return (
     <>
-      <div>
+      <div className="nvContainer">
         <div onClick={() => setHidden(!hidden)} className="nv">
           <i className="fa fa-2x fa-navicon"></i>
         </div>
@@ -38,11 +37,15 @@ export default function NavBar({ title }) {
         </div>
       </div>
       <style jsx>{`
+        .nvContainer {
+          position: relative;
+        }
         .nv {
           background-color: ${colors.grey};
           padding: 0.4rem 0.8rem;
           color: white;
-          font-size: 130%;
+          font-size: 1.3rem;
+          position: -webkit-sticky;
           position: sticky;
           display: none;
           top: 0px;
@@ -60,8 +63,8 @@ export default function NavBar({ title }) {
           border-bottom: 2px solid ${colors.secondaryColor};
           background-color: ${colors.grey};
           margin: auto;
-          font-family: alice;
-          font-size: 150%;
+          font-size: 1.5rem;
+          position: -webkit-sticky;
           position: sticky;
           top: 0px;
           z-index: 1;
@@ -95,9 +98,13 @@ export default function NavBar({ title }) {
         @media only screen and (max-width: 900px) {
           .navbar {
             border: 0px;
+            postion: sticky;
+            top: 0;
           }
           .nv {
             display: block;
+            postion: sticky;
+            top: 0;
           }
           .navli {
             display: block;
