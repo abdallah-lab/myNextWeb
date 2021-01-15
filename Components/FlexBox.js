@@ -38,7 +38,6 @@ export default function FlexBox({ title, text, folder, number, withlink }) {
           display: -webkit-flex;
           display: flex;
           flex-flow: row;
-          border-bottom: 1px solid ${colors.primaryColor};
         }
 
         .force-overflow {

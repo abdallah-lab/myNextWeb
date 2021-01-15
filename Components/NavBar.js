@@ -38,22 +38,21 @@ export default function NavBar({ title }) {
       </div>
       <style jsx>{`
         .nvContainer {
-          position: relative;
+          position: sticky;
+          top: 0;
+          z-index: 5;
         }
         .nv {
           background-color: ${colors.grey};
           padding: 0.4rem 0.8rem;
           color: white;
           font-size: 1.3rem;
-          position: -webkit-sticky;
-          position: sticky;
           display: none;
-          top: 0px;
           border-bottom: 1px solid ${colors.greyDark};
         }
         .nv i {
           padding: 0px 5px 0px 5px;
-          border: 1px solid ${colors.grey};
+          border: 1px solid #bbb;
           border-radius: 5px;
           box-shadow: 1px 1px 5px grey;
           cursor: pointer;
@@ -64,9 +63,6 @@ export default function NavBar({ title }) {
           background-color: ${colors.grey};
           margin: auto;
           font-size: 1.5rem;
-          position: -webkit-sticky;
-          position: sticky;
-          top: 0px;
           z-index: 1;
         }
         .max {
@@ -98,13 +94,9 @@ export default function NavBar({ title }) {
         @media only screen and (max-width: 900px) {
           .navbar {
             border: 0px;
-            postion: sticky;
-            top: 0;
           }
           .nv {
             display: block;
-            postion: sticky;
-            top: 0;
           }
           .navli {
             display: block;

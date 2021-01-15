@@ -53,13 +53,13 @@ export const myWork = [
   {
     title: "A Network Scientest",
     img: "Topological",
-    body: "The discreption is comming soon",
+    body: "The description is comming soon",
     category: "I worked as"
   },
   {
     title: "A Project Manager",
     img: "process",
-    body: "The discreption is comming soon",
+    body: "The description is comming soon",
     category: "I worked as"
   },
   {
@@ -93,7 +93,7 @@ export const myWork = [
   },
   {
     title: "A+ Tutoring",
-    img: "A+",
+    img: "A+Tutoring",
     body:
       "This page promote my Tutoring skills, and help me to reach my students online.",
     category: "Websites",

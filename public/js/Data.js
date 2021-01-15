@@ -63,3 +63,44 @@ export const myBrands = [
     link: "https://za-apps.com"
   }
 ];
+export const TutorialCategory = [
+  "Academic",
+  "Computer",
+  "Business & Management",
+  "High-Edu"
+];
+
+export const Tutorials = [
+  { name: "Math", img: "math", category: "Academic" },
+  { name: "Physics", img: "physics", category: "Academic" },
+  { name: "English", img: "english", category: "Academic" },
+  { name: "Biology", img: "biology", category: "Academic" },
+  { name: "Chemistry", img: "chemistry", category: "Academic" },
+  { name: "Programming", img: "hprogramming", category: "Computer" },
+  { name: "Front End", img: "frontend", category: "Computer" },
+  { name: "Back End", img: "backend", category: "Computer" },
+  { name: "Photoshop", img: "photoshop", category: "Computer" },
+  { name: "Design", img: "design", category: "Computer" },
+  { name: "Illustrator", img: "illustrator", category: "Computer" },
+  {
+    name: "Business Plan",
+    img: "businessplan",
+    category: "Business & Management"
+  },
+  {
+    name: "Business Model",
+    img: "businessmodel",
+    category: "Business & Management"
+  },
+  { name: "Accounting", img: "accounting", category: "Business & Management" },
+  { name: "Finance", img: "finance", category: "Business & Management" },
+  {
+    name: "Project Management",
+    img: "project",
+    category: "Business & Management"
+  },
+  { name: "Artificial Intelligence", img: "artificial", category: "High-Edu" },
+  { name: "System analysis & Design", img: "system", category: "High-Edu" },
+  { name: "Data Science", img: "data", category: "High-Edu" },
+  { name: "Network Science", img: "network", category: "High-Edu" }
+];

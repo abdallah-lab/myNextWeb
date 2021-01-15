@@ -23,18 +23,15 @@ export default function MainLayout({ title, children }) {
             text-decoration: unset;
             outline: none;
             -webkit-tap-highlight-color: transparent;
-            -ms-scroll-chaining: none;
-            overscroll-behavior: contain;
             -ms-overflow-style: none;
-            scrollbar-width: none;
-          }
-
-          *::-webkit-scrollbar {
-            display: none;
           }
           body {
             width: 100vw;
-            overflow-x: hidden;
+          }
+          main {
+            min-height: 40vh;
+            width: 100vw;
+            overflow: hidden;
           }
         `}
       </style>

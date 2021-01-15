@@ -3,8 +3,11 @@ import MainLayout from "../Layout/MainLayout";
 import Home from "./page/Home";
 import AboutMe from "./page/AboutMe";
 import MyWork from "./page/MyWork";
-import CommingSoon from "./page/CommingSoon";
+import ForYou from "./page/ForYou";
+import Reserve from "./page/Reserve";
 import TalkAbout from "./page/TalkAbout";
+import ContactMe from "./page/ContactMe";
+import CommingSoon from "./page/CommingSoon";
 
 export default function Page() {
   const router = useRouter();
@@ -17,9 +20,14 @@ export default function Page() {
         return <AboutMe />;
       case "My Work":
         return <MyWork />;
+      case "For You":
+        return <ForYou />;
+      case "Reserve":
+        return <Reserve />;
       case "Talk About":
         return <TalkAbout />;
-
+      case "Contact Me":
+        return <ContactMe />;
       case "commingSoon":
         return <CommingSoon />;
       default:

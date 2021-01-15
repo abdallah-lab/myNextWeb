@@ -56,6 +56,7 @@ export default function ContactBar() {
           padding: 0 0.5rem;
           color: ${colors.primaryColor};
           margin-top: 2rem;
+          overflow: auto;
         }
         .contact {
           padding-bottom: 0.5rem;

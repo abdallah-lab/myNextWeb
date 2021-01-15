@@ -1,3 +1,9 @@
+export const talkcategory = [
+  "Business Development",
+  "Business Intelligence",
+  "Information Technology",
+  "Management & IT"
+];
 export const talkAbout = [
   {
     title: "Is the utility of your product / service satisfied your consumer?",
@@ -32,7 +38,6 @@ export const talkAbout = [
     category: "Information Technology",
     Date: "04-09-2017"
   },
-
   {
     title:
       "Which project management methodology you must use in your work? why?!",
