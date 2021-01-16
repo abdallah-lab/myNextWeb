@@ -10,7 +10,7 @@ export default function NameBar({ title }) {
             border: solid ${colors.primaryColor};
             border-width: 1px 0px;
             color: ${colors.primaryColorDark};
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             padding: 5px 5px 5px 20px;
         }
       `}</style>

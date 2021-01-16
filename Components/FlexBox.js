@@ -7,22 +7,20 @@ export default function FlexBox({ title, text, folder, number, withlink }) {
       <div className="flexContainer">
         <NameBar title={title} />
         <div className="scrollbar">
-          <div className="force-overflow">
-            {withlink
-              ? withlink.map((n) => (
-                  <Link href={n.link}>
-                    <img
-                      src={`img/${folder}/${n.img}.png`}
-                      alt=""
-                      className="img"
-                    />
-                  </Link>
-                ))
-              : Array.from(Array(number).keys()).map((n) => (
-                  <img src={`img/${folder}/${n}.png`} alt="" className="img" />
-                ))}
-            <div className="text">{text}</div>
-          </div>
+          {withlink
+            ? withlink.map((n) => (
+                <Link href={n.link}>
+                  <img
+                    src={`img/${folder}/${n.img}.png`}
+                    alt=""
+                    className="img"
+                  />
+                </Link>
+              ))
+            : Array.from(Array(number).keys()).map((n) => (
+                <img src={`img/${folder}/${n}.png`} alt="" className="img" />
+              ))}
+          <div className="text">{text}</div>
         </div>
       </div>
       <style jsx>{`
@@ -38,10 +36,6 @@ export default function FlexBox({ title, text, folder, number, withlink }) {
           display: -webkit-flex;
           display: flex;
           flex-flow: row;
-        }
-
-        .force-overflow {
-          display: flex;
           padding: 1rem;
         }
         .scrollbar::-webkit-scrollbar-track {
