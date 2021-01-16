@@ -1,7 +1,7 @@
 import { colors } from "../../public/js/options";
 import { FaAngleDown } from "react-icons/fa";
-import FlexBox from "../../Components/FlexBox";
 import MyBrands from "../../Components/MyBrands";
+import Marque from "../../Components/Marque";
 export default function Home() {
   return (
     <>
@@ -31,6 +31,7 @@ export default function Home() {
           <img src="/img/decor.png" alt="" className="decorImg" />
         </div>
         <MyBrands />
+        <Marque />
       </div>
       <style jsx>{`
         .container {
@@ -60,14 +61,13 @@ export default function Home() {
           margin-bottom: 6rem;
         }
         .Btitle {
-          font-size: 550%;
+          font-size: 5rem;
           text-align: center;
           color: rgba(62, 64, 116, 1);
         }
 
         .describe {
-          font-size: 21px;
-          font-family: "Josefin Slab";
+          font-size: 1.1rem;
           text-align: center;
           color: ${colors.primaryColor};
         }
@@ -99,7 +99,7 @@ export default function Home() {
           }
 
           .Btitle {
-            font-size: 2.4rem;
+            font-size: 2.2rem;
           }
           .line {
             width: 90%;

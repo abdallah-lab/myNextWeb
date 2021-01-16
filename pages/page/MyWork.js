@@ -4,11 +4,11 @@ import NameBar from "../../Components/NameBar";
 import { colors } from "../../public/js/options";
 import { FaGlobeAmericas, FaFilePdf } from "react-icons/fa";
 import Link from "next/link";
-
+import PageTitle from "../../Components/PageTitle";
 export default function MyWork() {
   return (
     <>
-      <div className="title">My Work</div>
+      <PageTitle title={"My Work"} />
       <div>
         {myWorkCategory.map((category) => {
           return (
@@ -26,12 +26,6 @@ export default function MyWork() {
         })}
       </div>
       <style jsx>{`
-        .title {
-          color: ${colors.primaryColorDark};
-          font-size: 2.5rem;
-          text-align: center;
-          padding: 5px;
-        }
         .category {
           display: flex;
           flex-direction: column;
@@ -40,7 +34,7 @@ export default function MyWork() {
           width: 100%;
           display: flex;
           flex-wrap: wrap;
-          padding: 0.5rem 0.2rem;
+          padding: 1rem 0.2rem;
           justify-content: space-evenly;
         }
       `}</style>

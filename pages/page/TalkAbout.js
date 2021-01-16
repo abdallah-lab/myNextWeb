@@ -1,13 +1,14 @@
+import { useState } from "react";
 import { talkAbout } from "../../public/js/talkAbout";
 import { colors } from "../../public/js/options";
 import { FaCalendarCheck, FaSitemap } from "react-icons/fa";
-import { useState } from "react";
+import PageTitle from "../../Components/PageTitle";
 
 export default function TalkAbout() {
   const [search, setSearch] = useState("");
   return (
     <>
-      <div className="title">We can talk about</div>
+      <PageTitle title={"We can talk about"} />
       <div>
         <div className="search">
           <input
@@ -26,12 +27,6 @@ export default function TalkAbout() {
           ))}
       </div>
       <style jsx>{`
-        .title {
-          color: ${colors.primaryColorDark};
-          font-size: 2.5rem;
-          text-align: center;
-          padding: 0.5rem 0;
-        }
         .search {
           padding: 2rem;
         }

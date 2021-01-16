@@ -68,7 +68,7 @@ export const myWork = [
     body:
       "This company, Express your personal style in a whole new way, therefore we create the best easiest way for perfume lovers to choose, testing at home is our sign, just contact us and the tester stand will serve for you, to make sure that you get best perfume aroma in your hand.",
     category: "Websites",
-    link: "/commingSoon",
+    link: "https://abdallahmoubarak.000webhostapp.com/_mobarak/English/Home",
     linkText: "Visit the Website",
     icon: "web"
   },
@@ -78,7 +78,7 @@ export const myWork = [
     body:
       "This medical center is in Qom,Iran city, and their site is in progress.",
     category: "Websites",
-    link: "/commingSoon",
+    link: "https://abdallahmoubarak.000webhostapp.com/_Baqyatolah/",
     linkText: "Visit the Website",
     icon: "web"
   },
@@ -88,7 +88,7 @@ export const myWork = [
     body:
       "This center is an educational institute in Tehran,Iran city, I am working on internal intgration of educational system, and on all of thier systematic processings (management and educational); their site now is on progress. ",
     category: "Websites",
-    link: "/commingSoon",
+    link: "https://abdallahmoubarak.000webhostapp.com/_EmamHadi/index",
     linkText: "Visit the Website"
   },
   {
@@ -97,7 +97,7 @@ export const myWork = [
     body:
       "This page promote my Tutoring skills, and help me to reach my students online.",
     category: "Websites",
-    link: "/commingSoon",
+    link: "https://abdallahmoubarak.000webhostapp.com/_pages/ostad",
     linkText: "Visit the Website",
     icon: "web"
   },
@@ -108,19 +108,18 @@ export const myWork = [
     body:
       "This was the start of admission in my new project of making Empower Academy, It was about learning FrontEnd programming Basics.",
     category: "Websites",
-    link: "/commingSoon",
+    link: "https://abdallahmoubarak.000webhostapp.com/_pages/",
 
     linkText: "Visit the Website",
     icon: "web"
   },
-
   {
     title: "Beirut Resturant",
     img: "Beirut",
     body:
       "React, Sass, express and Nodejs, this is my big start in this compass. ",
     category: "Websites",
-    link: "/commingSoon",
+    link: "https://abdallahmoubarak.000webhostapp.com/beirut/",
     linkText: "Visit the Website",
     icon: "web"
   },

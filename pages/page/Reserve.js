@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { colors } from "../../public/js/options";
 import NameBar from "../../Components/NameBar";
+import PageTitle from "../../Components/PageTitle";
+
 import {
   TutorialCategory,
   Tutorials as ImportedTutorial
@@ -39,7 +41,7 @@ export default function Reserve() {
   };
   return (
     <>
-      <div className="title">Reserve Tutoring Time</div>
+      <PageTitle title={"Reserve Tutoring Time"} />
       <div>
         {TutorialCategory.map((category) => (
           <>
@@ -56,12 +58,6 @@ export default function Reserve() {
       </div>
 
       <style jsx>{`
-        .title {
-          color: ${colors.primaryColorDark};
-          font-size: 2.5rem;
-          text-align: center;
-          padding: 1rem 0.5rem;
-        }
         .scrollbar {
           width: 100%;
           overflow: auto;

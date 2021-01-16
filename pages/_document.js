@@ -34,32 +34,9 @@ export default class extends Document {
           />
           <link rel="manifest" href="/manifest.json" />
           <link rel="shortcut icon" href="/icons/favicon.ico" />
-          <style>{`
-
-html, body, #__next {
-
-height: 100%;
-
-}
-
-#__next {
-
-margin: 0 auto;
-
-}
-
-h1 {
-
-text-align: center;
-
-}
-
-`}</style>
         </Head>
-
         <body>
           <Main />
-
           <NextScript />
         </body>
       </Html>
