@@ -40,17 +40,17 @@ export const myBrands = [
   {
     name: "Mobarak Perfumes",
     img: "0",
-    link: "/commingSoon"
+    link: "https://abdallahmoubarak.000webhostapp.com/_mobarak/English/Home"
   },
   {
     name: "Empower Academy",
     img: "1",
-    link: "/commingSoon"
+    link: "https://abdallahmoubarak.000webhostapp.com/_pages/"
   },
   {
     name: "A+",
     img: "2",
-    link: "/commingSoon"
+    link: "https://abdallahmoubarak.000webhostapp.com/_pages/ostad"
   },
   {
     name: "Za Market",

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { colors } from "../../public/js/options";
 import NameBar from "../../Components/NameBar";
 import PageTitle from "../../Components/PageTitle";
-
+import { FaAngleDown } from "react-icons/fa";
 import {
   TutorialCategory,
   Tutorials as ImportedTutorial
@@ -56,6 +56,14 @@ export default function Reserve() {
           </>
         ))}
       </div>
+      <div className="cont">
+        <div className="rese">
+          Reserve Now
+          <span className="icon">
+            <FaAngleDown />
+          </span>
+        </div>
+      </div>
 
       <style jsx>{`
         .scrollbar {
@@ -86,6 +94,29 @@ export default function Reserve() {
             border-radius: 10px;
             webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
             background-color: #f1f060;
+        }
+
+        .cont {
+          width: 100%;
+          position: fixed;
+          bottom: 0;
+          margin-left: auto;
+          margin-right: auto;
+          max-height: 80%;
+          max-width: 450px;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+
+        .rese {
+          max-hight: 20px;
+          width: 100%;
+          background: rgba(62, 64, 116, 1);
+          font-size: 32px;
+          color: white;
+          padding: 3px;
+          text-align: center;
+          border-radius: 10px 10px 0 0;
         }
       `}</style>
     </>
