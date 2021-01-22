@@ -18,7 +18,7 @@ export default function Footer() {
             </div>
           ))}
         </div> */}
-        <div>© All Rights Reserved to Abdallah Mobarak since 2015</div>
+        <div>© All Rights Reserved since 2015</div>
       </div>
       <style jsx>{`
         .footer {

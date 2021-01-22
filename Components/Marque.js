@@ -23,7 +23,7 @@ export default function Marque() {
           position: fixed;
           background: rgba(251, 251, 216, 0.98);
           color: rgba(101, 103, 138, 1);
-          bottom: 2rem;
+          bottom: 4.6rem;
           font-size: 1.4rem;
           height: 2.8rem;
           line-height: 2.8rem;
