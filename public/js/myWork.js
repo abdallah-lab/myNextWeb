@@ -93,7 +93,7 @@ export const myWork = [
   },
   {
     title: "A+ Tutoring",
-    img: "A+Tutoring",
+    img: "A+Tutor",
     body:
       "This page promote my Tutoring skills, and help me to reach my students online.",
     category: "Websites",

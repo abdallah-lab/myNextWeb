@@ -2,15 +2,19 @@ import { useState, useEffect } from "react";
 import { colors } from "../../public/js/options";
 import NameBar from "../../Components/NameBar";
 import PageTitle from "../../Components/PageTitle";
-import { FaAngleDown } from "react-icons/fa";
+import Calendar from "../../Components/Calendar";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import {
   TutorialCategory,
   Tutorials as ImportedTutorial
 } from "../../public/js/Data";
 
 export default function Reserve() {
-  const [Tutorials, setTutorials] = useState([]);
+  const [tutorials, setTutorials] = useState([]);
   const [Msg, setMsg] = useState("");
+  const [open, setOpen] = useState(false);
+  const [selectedTut, setSelectedTut] = useState({});
+
   useEffect(() => {
     var a = 1;
     ImportedTutorial.map((tutorial) => (tutorial.id = a++));
@@ -18,26 +22,35 @@ export default function Reserve() {
     setTutorials(ImportedTutorial);
   }, []);
   useEffect(() => {
-    // setCart(Tutorials.filter((tutorial) => tutorial.hours > 0));
-    const filteredProduct = Tutorials.filter((tutorial) => tutorial.hours > 0);
+    const filteredProduct = tutorials.filter((tutorial) => tutorial.hours > 0);
     setMsg(
       filteredProduct
         .map((tutorial) => tutorial.name.en + " x" + tutorial.hours)
         .toString()
     );
-  }, [Tutorials]);
+  }, [tutorials]);
 
   const setHours = (id, hours) => {
-    setTutorials(
-      Tutorials.map((tutorial) => {
-        if (tutorial.id === id) {
-          tutorial.hours = hours;
-          return tutorial;
-        } else {
-          return tutorial;
-        }
-      })
-    );
+    var prevTut = tutorials.filter((tutorial) => tutorial.hours !== 0);
+    prevTut.length > 0
+      ? setSelectedTut(prevTut[0])
+      : setSelectedTut(tutorials.filter((tutorial) => tutorial.id === id)[0]);
+    const previd = prevTut.length > 0 ? prevTut[0].id : id;
+
+    selectedTut.hours < hours && setOpen(true);
+
+    id !== previd
+      ? alert("you can have one couse at a time")
+      : setTutorials(
+          tutorials.map((tutorial) => {
+            if (tutorial.id === id) {
+              tutorial.hours = hours;
+              return tutorial;
+            } else {
+              return tutorial;
+            }
+          })
+        );
   };
   return (
     <>
@@ -47,23 +60,36 @@ export default function Reserve() {
           <>
             <NameBar title={category + " Tutorials"} />
             <div className="scrollbar">
-              {Tutorials.filter(
-                (tutorial) => category === tutorial.category
-              ).map((tutorial) => (
-                <Tutorial setHours={setHours} tutorial={tutorial} />
-              ))}
+              {tutorials
+                .filter((tutorial) => category === tutorial.category)
+                .map((tutorial) => (
+                  <Tutorial setHours={setHours} tutorial={tutorial} />
+                ))}
             </div>
           </>
         ))}
       </div>
-      <div className="cont">
-        <div className="rese">
-          Reserve Now
-          <span className="icon">
-            <FaAngleDown />
-          </span>
+      {selectedTut.hours ? (
+        <div className="cont">
+          <div className="reseBar" onClick={() => setOpen(!open)}>
+            <div>Reserve Now</div>
+            <div className="icon">{open ? <FaAngleDown /> : <FaAngleUp />}</div>
+          </div>
+          <div className={`reseBody ${open && "open"}`}>
+            <div className="coursetext">
+              {"You want "}
+              <span className="course">{selectedTut.name}</span>{" "}
+              {" course for " +
+                selectedTut.hours +
+                " hours, reserve proper time."}
+            </div>
+            <div>
+              <Calendar />{" "}
+            </div>
+            <div className="btn">Send</div>
+          </div>
         </div>
-      </div>
+      ) : null}
 
       <style jsx>{`
         .scrollbar {
@@ -106,17 +132,51 @@ export default function Reserve() {
           max-width: 450px;
           left: 50%;
           transform: translate(-50%, 0);
+          z-index: 10;
         }
 
-        .rese {
-          max-hight: 20px;
+        .reseBar {
           width: 100%;
           background: rgba(62, 64, 116, 1);
-          font-size: 32px;
+          font-size: 1.2rem;
           color: white;
-          padding: 3px;
+          padding: 0.2rem;
           text-align: center;
-          border-radius: 10px 10px 0 0;
+          border-radius: 0.5rem 0.5rem 0 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .reseBody {
+          height: 0rem;
+          background: white;
+          transition: height 1s;
+        }
+        .open {
+          padding: 1rem;
+          height: 28rem;
+        }
+        .icon {
+          padding: 0 0.3rem;
+          margin-top: 0.2rem;
+        }
+        .coursetext {
+          border: solid ${colors.secondaryColor};
+          border-width: 1px 0;
+          padding: 0.2rem;
+          color: grey;
+        }
+        .course {
+          color: ${colors.primaryColorDark};
+        }
+        .btn {
+          font-size: 1.2rem;
+          background: ${colors.primaryColorDark};
+          width: fit-content;
+          color: white;
+          padding: 0.3rem 1rem;
+          margin: auto;
+          border-radius: 0.3rem;
         }
       `}</style>
     </>
