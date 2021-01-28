@@ -138,7 +138,7 @@ export default function Reserve() {
         .reseBar {
           width: 100%;
           background: rgba(62, 64, 116, 1);
-          font-size: 1.2rem;
+          font-size: 1.5rem;
           color: white;
           padding: 0.2rem;
           text-align: center;
