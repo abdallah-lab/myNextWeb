@@ -1,17 +1,75 @@
-export const mytime = [
+export const column = [
+  { name: "day", label: "day" },
+  { name: "twelve", label: "12:00" },
+  { name: "two", label: "14:00" },
+  { name: "four", label: "16:00" },
+  { name: "six", label: "18:00" },
+  { name: "eight", label: "20:00" },
+  { name: "ten", label: "22:00" }
+];
+
+export const row = [
   {
-    day: "day",
-    two: "14:00",
-    four: "16:00",
-    six: "18:00",
-    eight: "20:00",
-    ten: "22:00"
+    day: "Mon",
+    twelve: { checked: 1, selected: 0 },
+    two: { checked: 0, selected: 0 },
+    four: { checked: 1, selected: 0 },
+    six: { checked: 0, selected: 0 },
+    eight: { checked: 1, selected: 0 },
+    ten: { checked: 0, selected: 0 }
   },
-  { day: "Mon", two: 0, four: 1, six: 0, eight: 1, ten: 0 },
-  { day: "Tue", two: 0, four: 0, six: 0, eight: 0, ten: 0 },
-  { day: "Wed", two: 1, four: 1, six: 0, eight: 1, ten: 1 },
-  { day: "Thu", two: 1, four: 0, six: 0, eight: 0, ten: 0 },
-  { day: "Fri", two: 0, four: 1, six: 0, eight: 0, ten: 1 },
-  { day: "Sat", two: 0, four: 0, six: 1, eight: 0, ten: 1 },
-  { day: "Sun", two: 0, four: 1, six: 0, eight: 1, ten: 0 }
+  {
+    day: "Tue",
+    twelve: { checked: 0, selected: 0 },
+    two: { checked: 0, selected: 0 },
+    four: { checked: 0, selected: 0 },
+    six: { checked: 0, selected: 0 },
+    eight: { checked: 1, selected: 0 },
+    ten: { checked: 0, selected: 0 }
+  },
+  {
+    day: "Wed",
+    twelve: { checked: 0, selected: 0 },
+    two: { checked: 1, selected: 0 },
+    four: { checked: 1, selected: 0 },
+    six: { checked: 0, selected: 0 },
+    eight: { checked: 1, selected: 0 },
+    ten: { checked: 1, selected: 0 }
+  },
+  {
+    day: "Thu",
+    twelve: { checked: 0, selected: 0 },
+    two: { checked: 1, selected: 0 },
+    four: { checked: 0, selected: 0 },
+    six: { checked: 0, selected: 0 },
+    eight: { checked: 0, selected: 0 },
+    ten: { checked: 0, selected: 0 }
+  },
+  {
+    day: "Fri",
+    twelve: { checked: 0, selected: 0 },
+    two: { checked: 0, selected: 0 },
+    four: { checked: 1, selected: 0 },
+    six: { checked: 0, selected: 0 },
+    eight: { checked: 0, selected: 0 },
+    ten: { checked: 1, selected: 0 }
+  },
+  {
+    day: "Sat",
+    twelve: { checked: 0, selected: 0 },
+    two: { checked: 0, selected: 0 },
+    four: { checked: 0, selected: 0 },
+    six: { checked: 1, selected: 0 },
+    eight: { checked: 0, selected: 0 },
+    ten: { checked: 1, selected: 0 }
+  },
+  {
+    day: "Sun",
+    twelve: { checked: 0, selected: 0 },
+    two: { checked: 0, selected: 0 },
+    four: { checked: 1, selected: 0 },
+    six: { checked: 0, selected: 0 },
+    eight: { checked: 1, selected: 0 },
+    ten: { checked: 0, selected: 0 }
+  }
 ];

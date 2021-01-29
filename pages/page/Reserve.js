@@ -3,7 +3,9 @@ import { colors } from "../../public/js/options";
 import NameBar from "../../Components/NameBar";
 import PageTitle from "../../Components/PageTitle";
 import Calendar from "../../Components/Calendar";
+import { row as mytime } from "../../public/js/mytime";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+import Link from "next/link";
 import {
   TutorialCategory,
   Tutorials as ImportedTutorial
@@ -11,9 +13,11 @@ import {
 
 export default function Reserve() {
   const [tutorials, setTutorials] = useState([]);
-  const [Msg, setMsg] = useState("");
   const [open, setOpen] = useState(false);
   const [selectedTut, setSelectedTut] = useState({});
+  const [row, setRow] = useState(mytime);
+  const [selectedHours, setSelectedHours] = useState(0);
+  const [selectedTime, setSelectedTime] = useState([]);
 
   useEffect(() => {
     var a = 1;
@@ -21,36 +25,51 @@ export default function Reserve() {
     ImportedTutorial.map((tutorial) => (tutorial.hours = 0));
     setTutorials(ImportedTutorial);
   }, []);
-  useEffect(() => {
-    const filteredProduct = tutorials.filter((tutorial) => tutorial.hours > 0);
-    setMsg(
-      filteredProduct
-        .map((tutorial) => tutorial.name.en + " x" + tutorial.hours)
-        .toString()
-    );
-  }, [tutorials]);
 
   const setHours = (id, hours) => {
     var prevTut = tutorials.filter((tutorial) => tutorial.hours !== 0);
-    prevTut.length > 0
-      ? setSelectedTut(prevTut[0])
-      : setSelectedTut(tutorials.filter((tutorial) => tutorial.id === id)[0]);
     const previd = prevTut.length > 0 ? prevTut[0].id : id;
 
-    selectedTut.hours < hours && setOpen(true);
-
-    id !== previd
-      ? alert("you can have one couse at a time")
-      : setTutorials(
-          tutorials.map((tutorial) => {
-            if (tutorial.id === id) {
-              tutorial.hours = hours;
-              return tutorial;
-            } else {
-              return tutorial;
-            }
-          })
-        );
+    if (id === previd) {
+      prevTut.length > 0
+        ? setSelectedTut(prevTut[0])
+        : setSelectedTut(tutorials.filter((tutorial) => tutorial.id === id)[0]);
+      selectedTut.hours < hours && setOpen(true);
+      setTutorials(
+        tutorials.map((tutorial) => {
+          if (tutorial.id === id) {
+            tutorial.hours = hours;
+            return tutorial;
+          } else {
+            return tutorial;
+          }
+        })
+      );
+      setSelectedHours(hours / 2);
+    } else {
+      alert("you can have one couse at a time");
+    }
+  };
+  const setTime = (day, hour) => {
+    var newRow = row.filter((r) => r.day === day)[0];
+    if (selectedHours > selectedTime.length || newRow[hour].selected === 1) {
+      newRow[hour].selected === 1
+        ? setSelectedTime(
+            selectedTime.filter((obj) => obj !== day + " " + hour)
+          )
+        : setSelectedTime([...selectedTime, day + " " + hour]);
+      newRow = {
+        ...newRow,
+        [hour]: { ...newRow[hour], selected: newRow[hour].selected ? 0 : 1 }
+      };
+      setRow(row.map((r) => (r.day === day ? newRow : r)));
+    } else {
+      alert(
+        "You have just reserved " +
+          selectedHours * 2 +
+          " hours, and each period represents 2 hours"
+      );
+    }
   };
   return (
     <>
@@ -77,16 +96,34 @@ export default function Reserve() {
           </div>
           <div className={`reseBody ${open && "open"}`}>
             <div className="coursetext">
-              {"You want "}
-              <span className="course">{selectedTut.name}</span>{" "}
-              {" course for " +
-                selectedTut.hours +
-                " hours, reserve proper time."}
+              <span className="course">
+                <span className="courseName">{selectedTut.name}</span>course
+              </span>
+              <span className="control">
+                <Control tutorial={selectedTut} setHours={setHours} />
+              </span>
             </div>
             <div>
-              <Calendar />{" "}
+              <Calendar row={row} setTime={setTime} />{" "}
             </div>
-            <div className="btn">Send</div>
+            <Link
+              href={`https://wa.me/+96181026095?text=${
+                "I need " +
+                selectedTut.hours +
+                " hours of " +
+                selectedTut.name +
+                " on " +
+                selectedTime
+              }`}
+            >
+              <div
+                className={`btn ${
+                  selectedTime.length !== selectedHours && "disabled"
+                }`}
+              >
+                Send
+              </div>
+            </Link>
           </div>
         </div>
       ) : null}
@@ -151,10 +188,11 @@ export default function Reserve() {
           height: 0rem;
           background: white;
           transition: height 1s;
+          border: 1px solid ${colors.primaryColor};
         }
         .open {
           padding: 1rem;
-          height: 28rem;
+          height: 30rem;
         }
         .icon {
           padding: 0 0.3rem;
@@ -165,18 +203,34 @@ export default function Reserve() {
           border-width: 1px 0;
           padding: 0.2rem;
           color: grey;
+          display: flex;
+          align-items: center;
+          font-size: 1rem;
         }
         .course {
+          padding-right: 1rem;
+          flex: 1 1 100%;
+          font-size: 1.2rem;
+        }
+        .courseName {
           color: ${colors.primaryColorDark};
+          padding: 0 0.2rem;
+        }
+        .control {
+          width: 8rem;
+          flex: 1 1 50%;
         }
         .btn {
           font-size: 1.2rem;
           background: ${colors.primaryColorDark};
           width: fit-content;
           color: white;
-          padding: 0.3rem 1rem;
+          padding: 0.3rem 1.3rem;
           margin: auto;
           border-radius: 0.3rem;
+        }
+        .disabled {
+          background: grey;
         }
       `}</style>
     </>
@@ -192,30 +246,7 @@ const Tutorial = ({ tutorial, setHours }) => {
           alt={tutorial.img}
           className="img"
         />
-        {tutorial.hours === 0 ? (
-          <div
-            className="tutorialbtn"
-            onClick={() => setHours(tutorial.id, tutorial.hours + 2)}
-          >
-            Reserve
-          </div>
-        ) : (
-          <div className="tutorialbtns">
-            <div
-              className="plus"
-              onClick={() => setHours(tutorial.id, tutorial.hours + 2)}
-            >
-              +
-            </div>
-            <div className="hours">{tutorial.hours}</div>
-            <div
-              className="min"
-              onClick={() => setHours(tutorial.id, tutorial.hours - 2)}
-            >
-              -
-            </div>
-          </div>
-        )}
+        <Control tutorial={tutorial} setHours={setHours} />
       </div>
       <style jsx>{`
         .img {
@@ -227,7 +258,40 @@ const Tutorial = ({ tutorial, setHours }) => {
           border-radius: 0.3rem;
           margin: 0.5rem;
         }
+      `}</style>
+    </>
+  );
+};
+const Control = ({ tutorial, setHours }) => {
+  return (
+    <>
+      {tutorial.hours === 0 ? (
+        <div
+          className="tutorialbtn"
+          onClick={() => setHours(tutorial.id, tutorial.hours + 2)}
+        >
+          Reserve
+        </div>
+      ) : (
+        <div className="tutorialbtns">
+          <div
+            className="plus"
+            onClick={() => setHours(tutorial.id, tutorial.hours + 2)}
+          >
+            +
+          </div>
 
+          <div className="hours">{tutorial.hours}</div>
+
+          <div
+            className="min"
+            onClick={() => setHours(tutorial.id, tutorial.hours - 2)}
+          >
+            -
+          </div>
+        </div>
+      )}
+      <style jsx>{`
         .tutorialbtn {
           font-size: 1.2rem;
           color: white;
@@ -240,6 +304,7 @@ const Tutorial = ({ tutorial, setHours }) => {
         .tutorialbtn:hover {
           cursor: pointer;
         }
+
         .tutorialbtns {
           font-size: 1.8rem;
           font-width: bold;
@@ -247,6 +312,7 @@ const Tutorial = ({ tutorial, setHours }) => {
           justify-content: space-between;
           align-items: center;
         }
+
         .plus,
         .min {
           color: white;
@@ -258,12 +324,15 @@ const Tutorial = ({ tutorial, setHours }) => {
           align-items: center;
           align-self: center;
         }
+
         .plus {
           background: ${colors.primaryColorDark};
         }
+
         .min {
           background: grey;
         }
+
         .hours::after {
           content: " hours";
           font-size: 0.8rem;

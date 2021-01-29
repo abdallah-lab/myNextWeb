@@ -24,9 +24,9 @@ export default function Marque() {
           background: rgba(251, 251, 216, 0.98);
           color: rgba(101, 103, 138, 1);
           bottom: 4.6rem;
-          font-size: 1.4rem;
-          height: 2.8rem;
-          line-height: 2.8rem;
+          font-size: 1.3rem;
+          height: 2.6rem;
+          line-height: 2.6rem;
           width: 100%;
           border: 1px solid rgba(211, 192, 8, 1);
           border-width: 1px 0px 1px 0px;

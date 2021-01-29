@@ -46,7 +46,7 @@ export default function NavBar({ title }) {
           background-color: ${colors.grey};
           padding: 0.4rem 0.8rem;
           color: white;
-          font-size: 1.3rem;
+          font-size: 1rem;
           display: none;
           border-bottom: 1px solid ${colors.greyDark};
         }
@@ -62,7 +62,7 @@ export default function NavBar({ title }) {
           border-bottom: 2px solid ${colors.secondaryColor};
           background-color: ${colors.grey};
           margin: auto;
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           z-index: 1;
         }
         .max {
