@@ -106,24 +106,24 @@ export default function Reserve() {
             <div>
               <Calendar row={row} setTime={setTime} />{" "}
             </div>
-            <Link
-              href={`https://wa.me/+96181026095?text=${
-                "I need " +
-                selectedTut.hours +
-                " hours of " +
-                selectedTut.name +
-                " on " +
-                selectedTime
-              }`}
-            >
-              <div
-                className={`btn ${
-                  selectedTime.length !== selectedHours && "disabled"
+            {selectedTime.length === selectedHours ? (
+              <Link
+                href={`https://wa.me/+96181026095?text=${
+                  "I need " +
+                  selectedTut.hours +
+                  " hours of " +
+                  selectedTut.name +
+                  " on " +
+                  selectedTime
                 }`}
               >
-                Send
+                <div className="btn">Send</div>
+              </Link>
+            ) : (
+              <div className="note">
+                Each period means two hours, select one for every 2 hours
               </div>
-            </Link>
+            )}
           </div>
         </div>
       ) : null}
@@ -210,11 +210,12 @@ export default function Reserve() {
         .course {
           padding-right: 1rem;
           flex: 1 1 100%;
-          font-size: 1.2rem;
+          font-size: 1rem;
         }
         .courseName {
           color: ${colors.primaryColorDark};
           padding: 0 0.2rem;
+          font-size: 1.2rem;
         }
         .control {
           width: 8rem;
@@ -231,6 +232,9 @@ export default function Reserve() {
         }
         .disabled {
           background: grey;
+        }
+        .note {
+          color: grey;
         }
       `}</style>
     </>
