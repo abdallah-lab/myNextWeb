@@ -18,12 +18,17 @@ export default function Header() {
       </div>
       <style jsx>{`
         .header {
+          background-color: ${colors.primaryColor};
+          background: -o-radial-gradient(
+            circle,
+            #9798b3 0%,
+            ${colors.primaryColor} 50%
+          );
           background: radial-gradient(
             circle,
             #9798b3 0%,
             ${colors.primaryColor} 50%
           );
-          background-color: ${colors.primaryColor};
           border-bottom: 1px solid ${colors.greyDark};
           padding: 2rem 0;
           position: relative;
@@ -46,6 +51,8 @@ export default function Header() {
           background-color: white;
           border: 1px solid ${colors.primaryColorDark};
           border-radius: 12px;
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
           width: fit-content;
           text-align: center;
           margin: auto;
@@ -66,9 +73,9 @@ export default function Header() {
         .corner_2 {
           position: absolute;
           right: 0.5rem;
+          -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
         }
-
         .corner-img {
           max-width: 100%;
           padding: 1rem;
@@ -81,7 +88,6 @@ export default function Header() {
             display: none;
           }
         }
-
         @media only screen and (max-width: 500px) {
           .elliptic {
             height: auto;

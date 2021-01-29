@@ -45,40 +45,39 @@ export default function ForYou() {
         .flexContainer {
           margin: 0.5rem 0rem;
         }
-
         .scrollbar {
           width: 100%;
           overflow-x: scroll;
           display: -webkit-box;
-          display: -moz-box;
           display: -ms-flexbox;
-          display: -webkit-flex;
           display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-flow: row;
           flex-flow: row;
           padding: 1rem;
         }
-
         .scrollbar::-webkit-scrollbar-track {
-            webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            background-color: #ffffff;
+          webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          border-radius: 10px;
+          background-color: #ffffff;
         }
-
         .scrollbar::-webkit-scrollbar {
-            height: 5px;
-            width: 5px;
-            background-color: #f5f5f5;
+          height: 5px;
+          width: 5px;
+          background-color: #f5f5f5;
         }
-
         .scrollbar::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-            background-color: #f1f060;
+          border-radius: 10px;
+          webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          background-color: #f1f060;
         }
         .book {
           border: 1px solid rgba(101, 103, 138, 1);
           border-radius: 1.2rem;
           width: 12rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
           height: 16rem;
           margin: 0.3rem;
@@ -92,11 +91,12 @@ export default function ForYou() {
           border: 1px solid rgba(101, 103, 138, 1);
           border-radius: 1.2rem;
           width: 12rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
           height: 12rem;
           margin: 0.3rem;
         }
-
         .link img {
           border-radius: 20px;
           width: 100%;
@@ -152,7 +152,6 @@ const File = ({ category }) => {
           border: solid rgba(101, 103, 138, 1);
           border-width: 0px 0px 0.5px 0.5px;
         }
-
         .icon {
           margin: auto 0.2rem;
         }

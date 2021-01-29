@@ -38,6 +38,7 @@ export default function NavBar({ title }) {
       </div>
       <style jsx>{`
         .nvContainer {
+          position: -webkit-sticky;
           position: sticky;
           top: 0;
           z-index: 5;
@@ -54,6 +55,7 @@ export default function NavBar({ title }) {
           padding: 0px 5px 0px 5px;
           border: 1px solid #bbb;
           border-radius: 5px;
+          -webkit-box-shadow: 1px 1px 5px grey;
           box-shadow: 1px 1px 5px grey;
           cursor: pointer;
         }
@@ -68,7 +70,11 @@ export default function NavBar({ title }) {
         .max {
           width: 100%;
           margin: auto;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
           justify-content: flex-start;
           list-style-type: none;
           padding: 0px;
@@ -76,6 +82,8 @@ export default function NavBar({ title }) {
           color: white;
         }
         .navli {
+          -webkit-box-flex: 1;
+          -ms-flex: 1 1 100%;
           flex: 1 1 100%;
           margin: 1px;
           padding: 0.5rem 1rem;
@@ -87,6 +95,7 @@ export default function NavBar({ title }) {
           text-align: center;
           overflow-wrap: unset;
         }
+
         .active {
           color: white;
           background-color: ${colors.primaryColor};

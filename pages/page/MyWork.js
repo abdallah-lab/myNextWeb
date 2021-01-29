@@ -27,14 +27,24 @@ export default function MyWork() {
       </div>
       <style jsx>{`
         .category {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
           flex-direction: column;
         }
         .workBoxContainer {
           width: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -ms-flex-wrap: wrap;
           flex-wrap: wrap;
           padding: 1rem 0.2rem;
+          -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
         }
       `}</style>
@@ -87,10 +97,13 @@ const Box = ({ work }) => {
           padding: 10px;
           border: 1px solid ${colors.primaryColorDark};
           border-radius: 10px;
+          -webkit-box-shadow: 2px 2px 10px lightgrey;
           box-shadow: 2px 2px 10px lightgrey;
           cursor: pointer;
           border-color: ${colors.secondaryColor};
           flex: 0 1 ${focus ? "64%" : "31%"};
+          -webkit-box-flex: 0;
+          -ms-flex: 0 1 ${focus ? "64%" : "31%"};
         }
         .workBox:hover {
           border-color: rgba(101, 103, 138, 1);
@@ -117,9 +130,14 @@ const Box = ({ work }) => {
           line-height: 1.8rem;
           text-align: justify;
         }
+
         .linktext {
           color: grey;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
         }
         .text {
@@ -129,6 +147,8 @@ const Box = ({ work }) => {
           padding: 0 0.5rem;
         }
         .dImg {
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
           width: fit-content;
           max-width: 100%;
           margin: auto;
@@ -136,14 +156,17 @@ const Box = ({ work }) => {
         .dImg img {
           max-width: 100%;
         }
-
         @media only screen and (max-width: 900px) {
           .workBox {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 1 46%;
             flex: 0 1 46%;
           }
         }
         @media only screen and (max-width: 500px) {
           .workBox {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 1 100%;
             flex: 0 1 100%;
           }
         }

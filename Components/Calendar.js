@@ -1,7 +1,6 @@
 import { column } from "../public/js/mytime";
 import { colors } from "../public/js/options";
 import { FaCheck } from "react-icons/fa";
-import { useState } from "react";
 
 export default function Calendar({ row, setTime }) {
   return (
@@ -24,18 +23,27 @@ export default function Calendar({ row, setTime }) {
         .calender {
           padding: 1rem 0;
         }
-
         .calenderRow {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
         }
         .firstRowCell {
           font-size: 0.9rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           height: 1.8rem;
           padding: 0.2rem;
           border: 0.5px solid #999;
+          -webkit-box-flex: 1;
+          -ms-flex: 1 1 100%;
           flex: 1 1 100%;
           background: ${colors.primaryColor};
           color: white;
@@ -70,22 +78,33 @@ const Cell = ({ setTime, row, cell }) => {
       <style jsx>{`
         .cell {
           font-size: 0.9rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           height: 1.8rem;
           padding: 0.2rem;
           border: 0.5px solid #999;
+          -webkit-box-flex: 1;
+          -ms-flex: 1 1 100%;
           flex: 1 1 100%;
         }
-
         .checked {
           width: 100%;
           height: 100%;
           background: grey;
           border-radius: 0.2rem;
           color: white;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           padding-left: 0.5rem;
         }
@@ -96,7 +115,11 @@ const Cell = ({ setTime, row, cell }) => {
           background: ${colors.secondaryColor};
           border-radius: 0.2rem;
           color: white;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           padding-left: 0.5rem;
         }

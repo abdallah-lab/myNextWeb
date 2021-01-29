@@ -51,7 +51,11 @@ export default function ContactBar() {
       <style jsx>{`
         .contactContainer {
           font-size: 1.6rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           padding: 0 0.5rem;
           color: ${colors.primaryColor};

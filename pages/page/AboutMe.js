@@ -57,8 +57,13 @@ export default function AboutMe() {
 
       <style jsx>{`
         .container {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
+          -ms-flex-wrap: wrap;
           flex-wrap: wrap;
           padding: 1.2rem 0;
         }
@@ -69,8 +74,13 @@ export default function AboutMe() {
           border: 1px solid ${colors.secondaryColor};
           border-radius: 10px;
           background-color: white;
+          -webkit-box-shadow: 2px 2px 10px grey;
           box-shadow: 2px 2px 10px grey;
+          height: -webkit-fit-content;
+          height: -moz-fit-content;
           height: fit-content;
+          -webkit-box-flex: 1;
+          -ms-flex: 1 1 16rem;
           flex: 1 1 16rem;
         }
         p {
@@ -96,6 +106,7 @@ export default function AboutMe() {
           background-color: #ddd;
           margin-bottom: 3%;
         }
+
         .skill {
           font-size: 1.2em;
           text-align: right;

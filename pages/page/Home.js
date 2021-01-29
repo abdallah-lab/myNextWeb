@@ -47,6 +47,8 @@ export default function Home() {
           width: 100%;
         }
         .rotate {
+          -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
           transform: rotate(180deg);
         }
         .line {
@@ -55,6 +57,8 @@ export default function Home() {
         }
         .down {
           font-size: 2rem;
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
           width: fit-content;
           color: grey;
           margin: auto;
@@ -71,16 +75,15 @@ export default function Home() {
           text-align: center;
           color: ${colors.primaryColor};
         }
+
         .down1 {
           margin-bottom: 5rem;
         }
-
         .down2 {
           margin-bottom: 16rem;
           width: 70vw;
           max-width: 25rem;
         }
-
         @media only screen and (max-width: 840px) {
           .top_wl {
             width: 100%;
@@ -92,12 +95,10 @@ export default function Home() {
             width: 70%;
           }
         }
-
         @media only screen and (max-width: 500px) {
           .top_w {
             width: 90%;
           }
-
           .Btitle {
             font-size: 2.2rem;
           }

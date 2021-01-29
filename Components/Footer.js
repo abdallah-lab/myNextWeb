@@ -30,8 +30,13 @@ export default function Footer() {
           text-align: center;
         }
         .footerElements {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
         }
         .footerTitle {
@@ -41,10 +46,11 @@ export default function Footer() {
           color: white;
           text-align: left;
         }
-
         .cen {
           min-width: 15rem;
           padding: 2rem 0;
+          -webkit-box-flex: 1;
+          -ms-flex: 1 1 15rem;
           flex: 1 1 15rem;
         }
         .cen ul li {

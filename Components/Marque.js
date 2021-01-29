@@ -31,7 +31,6 @@ export default function Marque() {
           border: 1px solid rgba(211, 192, 8, 1);
           border-width: 1px 0px 1px 0px;
         }
-
         .marquee::after {
           content: "";
           clear: both;

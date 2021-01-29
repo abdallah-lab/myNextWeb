@@ -31,29 +31,28 @@ export default function FlexBox({ title, text, folder, number, withlink }) {
           width: 100%;
           overflow-x: scroll;
           display: -webkit-box;
-          display: -moz-box;
           display: -ms-flexbox;
-          display: -webkit-flex;
           display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-flow: row;
           flex-flow: row;
           padding: 1rem;
         }
         .scrollbar::-webkit-scrollbar-track {
-            webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            background-color: #ffffff;
+          webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          border-radius: 10px;
+          background-color: #ffffff;
         }
-
         .scrollbar::-webkit-scrollbar {
-            height: 5px;
-            width: 5px;
-            background-color: #f5f5f5;
+          height: 5px;
+          width: 5px;
+          background-color: #f5f5f5;
         }
-
         .scrollbar::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-            background-color: #f1f060;
+          border-radius: 10px;
+          webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          background-color: #f1f060;
         }
         .img {
           padding-right: 1rem;
@@ -63,6 +62,8 @@ export default function FlexBox({ title, text, folder, number, withlink }) {
           padding: 1rem;
           width: 14rem;
           font-size: 1.5rem;
+          -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
           align-self: center;
           text-align: center;
           color: ${colors.primaryColorDark};

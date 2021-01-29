@@ -3,8 +3,8 @@ export default function ContactMe() {
     <>
       <svg
         width="100%"
-        height="fit-content"
-        viewBox="0 0 1367 1024"
+        height="100%"
+        viewBox="90 0 1300 960"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -123,10 +123,25 @@ export default function ContactMe() {
       </svg>
       <style jsx>{`
         #eye {
+          -webkit-animation-name: eyes;
           animation-name: eyes;
+          -webkit-animation-duration: 3s;
           animation-duration: 3s;
+          -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+          -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+        }
+        @-webkit-keyframes eyes {
+          0% {
+            opacity: 0%;
+          }
+          15% {
+            opacity: 100%;
+          }
+          100% {
+            opacity: 100%;
+          }
         }
         @keyframes eyes {
           0% {

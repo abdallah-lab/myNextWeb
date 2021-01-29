@@ -103,16 +103,21 @@ const TalkBox = ({ talk }) => {
           color: rgba(148, 148, 148, 1);
           padding: 0.5rem 1rem;
           letter-spacing: 1px;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
           flex-direction: column;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
           justify-content: space-between;
         }
-
         .comment {
           padding: 0.5rem;
           padding-bottom: 0px;
         }
-
         .commentInput {
           font-size: 1rem;
           padding: 0.3rem 0.7rem;

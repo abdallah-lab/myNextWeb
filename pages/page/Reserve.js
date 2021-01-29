@@ -127,7 +127,6 @@ export default function Reserve() {
           </div>
         </div>
       ) : null}
-
       <style jsx>{`
         .scrollbar {
           width: 100%;
@@ -142,23 +141,20 @@ export default function Reserve() {
         }
 
         .scrollbar::-webkit-scrollbar-track {
-            webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            background-color: #ffffff;
+          webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          border-radius: 10px;
+          background-color: #ffffff;
         }
-
         .scrollbar::-webkit-scrollbar {
-            height: 5px;
-            width: 5px;
-            background-color: #f5f5f5;
+          height: 5px;
+          width: 5px;
+          background-color: #f5f5f5;
         }
-
         .scrollbar::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-            background-color: #f1f060;
+          border-radius: 10px;
+          webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          background-color: #f1f060;
         }
-
         .cont {
           width: 100%;
           position: fixed;
@@ -168,10 +164,11 @@ export default function Reserve() {
           max-height: 80%;
           max-width: 450px;
           left: 50%;
+          -webkit-transform: translate(-50%, 0);
+          -ms-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
           z-index: 10;
         }
-
         .reseBar {
           width: 100%;
           background: rgba(62, 64, 116, 1);
@@ -180,8 +177,14 @@ export default function Reserve() {
           padding: 0.2rem;
           text-align: center;
           border-radius: 0.5rem 0.5rem 0 0;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
         }
         .reseBody {
@@ -189,10 +192,20 @@ export default function Reserve() {
           background: white;
           transition: height 1s;
           border: 1px solid ${colors.primaryColor};
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
         }
         .open {
           padding: 1rem;
-          height: 30rem;
+          height: 26rem;
         }
         .icon {
           padding: 0 0.3rem;
@@ -203,12 +216,19 @@ export default function Reserve() {
           border-width: 1px 0;
           padding: 0.2rem;
           color: grey;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           font-size: 1rem;
         }
+
         .course {
           padding-right: 1rem;
+          -webkit-box-flex: 1;
+          -ms-flex: 1 1 100%;
           flex: 1 1 100%;
           font-size: 1rem;
         }
@@ -217,13 +237,19 @@ export default function Reserve() {
           padding: 0 0.2rem;
           font-size: 1.2rem;
         }
+
         .control {
           width: 8rem;
+          -webkit-box-flex: 1;
+          -ms-flex: 1 1 50%;
           flex: 1 1 50%;
         }
+
         .btn {
           font-size: 1.2rem;
           background: ${colors.primaryColorDark};
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
           width: fit-content;
           color: white;
           padding: 0.3rem 1.3rem;
@@ -312,20 +338,32 @@ const Control = ({ tutorial, setHours }) => {
         .tutorialbtns {
           font-size: 1.8rem;
           font-width: bold;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
           justify-content: space-between;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
         }
-
         .plus,
         .min {
           color: white;
           border-radius: 5rem;
           height: 1.6rem;
           width: 1.6rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
+          -ms-flex-item-align: center;
           align-self: center;
         }
 
