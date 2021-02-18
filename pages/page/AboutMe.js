@@ -13,9 +13,9 @@ export default function AboutMe() {
             <p>
               &nbsp;&nbsp;Hi, This is Abdallah Mobarak, I'm Lebanese national.
               I'm very glad you visit my web page, I'm a Biomedical engineer
-              (Isfahan University), HealthCare IT Master student (Tehran
-              University). Design is my true passion in the life, and I love
-              creating new things.
+              (Isfahan University), HealthCare IT Master (Tehran University).
+              Design is my true passion in the life, and I love creating new
+              things.
             </p>
             <p>
               Whether you have a project or you need a website and uniform style
