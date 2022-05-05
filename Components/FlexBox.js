@@ -57,6 +57,7 @@ export default function FlexBox({ title, text, folder, number, withlink }) {
         .img {
           padding-right: 1rem;
           height: 9rem;
+          cursor: pointer;
         }
         .text {
           padding: 1rem;

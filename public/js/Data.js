@@ -53,14 +53,24 @@ export const myBrands = [
     link: "https://abdallahmoubarak.000webhostapp.com/_pages/ostad"
   },
   {
+    name: "Za Apps",
+    img: "4",
+    link: "https://za-apps.vercel.app"
+  },
+  {
     name: "Za Market",
     img: "3",
     link: "https://za-market.com"
   },
   {
-    name: "Za Apps",
-    img: "4",
-    link: "https://za-apps.com"
+    name: "Za Menu",
+    img: "5",
+    link: "https://za-menu.vercel.app"
+  },
+  {
+    name: "Smart Crystal",
+    img: "6",
+    link: "https://smart-crystal.vercel.app"
   }
 ];
 export const TutorialCategory = [

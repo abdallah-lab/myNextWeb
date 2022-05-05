@@ -2,21 +2,22 @@ import { colors } from "../../public/js/options";
 import { FaAngleDown } from "react-icons/fa";
 import MyBrands from "../../Components/MyBrands";
 import Marque from "../../Components/Marque";
+import Decor from "../../public/svg/Decor";
 export default function Home() {
   return (
     <>
       <div className="container">
         <div className="decor down1">
-          <img src="/img/decor.png" alt="" className="decorImg" />
+          <Decor />
         </div>
         <div className="down">
           <FaAngleDown />
         </div>
         <div className="decor rotate">
-          <img src="/img/decor.png" alt="" className="decorImg" />
+          <Decor />
         </div>
         <div className="Btitle">
-          <span>Strategic HIS Manager</span>
+          <span>Strategic IS Manager</span>
         </div>
         <div className="line">
           <img src="/img/linee.png" alt="" className="decorImg" />
@@ -28,7 +29,7 @@ export default function Home() {
           </span>
         </div>
         <div className="decor down2">
-          <img src="/img/decor.png" alt="" className="decorImg" />
+          <Decor />
         </div>
         <MyBrands />
         <Marque />

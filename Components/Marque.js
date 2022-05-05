@@ -5,12 +5,12 @@ export default function Marque() {
     <>
       <div className="marquee">
         <marquee>
-          {talkAbout.map((talk) => (
-            <>
+          {talkAbout.map((talk, i) => (
+            <span key={i}>
               <span>&nbsp;&nbsp; |&nbsp;</span>
               <img src="/img/icon.png" alt="" className="img" />
               <span> | &nbsp;&nbsp; Talk about: {talk.title}</span>
-            </>
+            </span>
           ))}
         </marquee>
       </div>
