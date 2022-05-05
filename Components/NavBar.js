@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { colors } from "../public/js/options";
+import { colors } from "@/public/js/options";
 
 export default function NavBar({ title }) {
   const [hidden, setHidden] = useState(true);
@@ -24,15 +24,13 @@ export default function NavBar({ title }) {
         </div>
         <div className="navbar">
           <ul className={`max ${hidden && "displayNone"}`}>
-            {nav.map((obj) => {
-              return (
-                <Link href={`/${obj.title}`}>
-                  <li className={`navli ${title === obj.title && "active"}`}>
-                    {obj.title}
-                  </li>
-                </Link>
-              );
-            })}
+            {nav.map((obj, i) => (
+              <Link key={i} href={`/${obj.title}`}>
+                <li className={`navli ${title === obj.title && "active"}`}>
+                  {obj.title}
+                </li>
+              </Link>
+            ))}
           </ul>
         </div>
       </div>

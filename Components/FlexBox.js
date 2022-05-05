@@ -1,5 +1,5 @@
 import NameBar from "./NameBar";
-import { colors } from "../public/js/options";
+import { colors } from "@/public/js/options";
 import Link from "next/link";
 export default function FlexBox({ title, text, folder, number, withlink }) {
   return (

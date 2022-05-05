@@ -1,4 +1,4 @@
-import { colors } from "../public/js/options";
+import { colors } from "@/public/js/options";
 export default function Header() {
   return (
     <>

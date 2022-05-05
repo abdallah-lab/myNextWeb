@@ -1,4 +1,4 @@
-import { talkAbout } from "../public/js/talkAbout";
+import { talkAbout } from "@/public/js/talkAbout";
 
 export default function Marque() {
   return (

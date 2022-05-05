@@ -1,5 +1,5 @@
-import { column } from "../public/js/mytime";
-import { colors } from "../public/js/options";
+import { column } from "@/public/js/mytime";
+import { colors } from "@/public/js/options";
 import { FaCheck } from "react-icons/fa";
 
 export default function Calendar({ row, setTime }) {

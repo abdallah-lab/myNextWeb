@@ -6,7 +6,7 @@ import {
   FaTwitter
 } from "react-icons/fa";
 import Link from "next/link";
-import { colors } from "../public/js/options";
+import { colors } from "@/public/js/options";
 
 export default function ContactBar() {
   return (
@@ -61,6 +61,7 @@ export default function ContactBar() {
           color: ${colors.primaryColor};
           margin-top: 2rem;
           overflow: auto;
+          gap: 0.3rem;
         }
         .contact {
           padding-bottom: 0.5rem;

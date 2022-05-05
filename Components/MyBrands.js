@@ -1,5 +1,5 @@
 import FlexBox from "./FlexBox";
-import { myBrands } from "../public/js/Data";
+import { myBrands } from "@/public/js/Data";
 
 export default function MyBrands() {
   return (

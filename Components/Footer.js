@@ -1,6 +1,5 @@
-import { colors } from "../public/js/options";
+import { colors } from "@/public/js/options";
 import ContactBar from "./ContactBar";
-import { footerList } from "../public/js/Data";
 export default function Footer() {
   return (
     <>
