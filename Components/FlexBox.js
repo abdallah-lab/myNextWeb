@@ -8,8 +8,8 @@ export default function FlexBox({ title, text, folder, number, withlink }) {
         <NameBar title={title} />
         <div className="scrollbar">
           {withlink
-            ? withlink.map((n) => (
-                <Link href={n.link}>
+            ? withlink.map((n, i) => (
+                <Link key={i} href={n.link}>
                   <img
                     src={`img/${folder}/${n.img}.png`}
                     alt=""
