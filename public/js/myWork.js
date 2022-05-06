@@ -124,20 +124,20 @@ export const myWork = [
     icon: "web"
   },
   {
-    title: "Za-Market",
-    img: "Za-Market",
-    body: "The Nextjs and what is the Next",
-    category: "Websites",
-    link: "https://za-market.com",
-    linkText: "Visit the Website",
-    icon: "web"
-  },
-  {
     title: "Za-apps",
     img: "Za-apps",
     body: "Za-apps wait for more, the lovely world of technology",
     category: "Websites",
-    link: "https://za-apps.com",
+    link: "https://za-apps.vercel.app",
+    linkText: "Visit the Website",
+    icon: "web"
+  },
+  {
+    title: "Za-Market",
+    img: "Za-Market",
+    body: "The Nextjs and what is the Next",
+    category: "Websites",
+    link: "https://za-market.vercel.app",
     linkText: "Visit the Website",
     icon: "web"
   },
@@ -148,6 +148,52 @@ export const myWork = [
       "Za-apps wait for more, the lovely world of technology: then the menu of a Cafe",
     category: "Websites",
     link: "https://drop-cafe.vercel.app",
+    linkText: "Visit the Website",
+    icon: "web"
+  },
+  {
+    title: "Za menu",
+    img: "Za-Menu",
+    body: "",
+    category: "Websites",
+    link: "https://za-menu.vercel.app",
+    linkText: "Visit the Website",
+    icon: "web"
+  },
+  {
+    title: "Moge Tee",
+    img: "MogeTee",
+    body:
+      "Za-apps wait for more, the lovely world of technology: then the menu of a Cafe",
+    category: "Websites",
+    link: "https://mogetee.vercel.app",
+    linkText: "Visit the Website",
+    icon: "web"
+  },
+  {
+    title: "EMR",
+    img: "EMR",
+    body: "",
+    category: "Websites",
+    link: "https://emr.vercel.app",
+    linkText: "Visit the Website",
+    icon: "web"
+  },
+  {
+    title: "Al Tanoor",
+    img: "Altanoor",
+    body: "",
+    category: "Websites",
+    link: "https://altanoor.vercel.app",
+    linkText: "Visit the Website",
+    icon: "web"
+  },
+  {
+    title: "SMART CRYSTAL",
+    img: "sc",
+    body: "",
+    category: "Websites",
+    link: "https://smart-crystal.vercel.app",
     linkText: "Visit the Website",
     icon: "web"
   },
